@@ -1,0 +1,89 @@
+{
+    "produks":[
+        {
+            "id" : 1,
+            "nama" : "Tart Choco Everest",
+            "kategori": "Tart",
+            "harga" : 90000,
+            "src" : "src/images/tart_choco_everest.png"
+        },
+        {
+            "id" : 2,
+            "nama" : "Tart With Strawberry",
+            "kategori": "Tart",
+            "harga" : 80000,
+            "src" : "src/images/tart_with_strawberry.png"
+        },
+        {
+            "id" : 3,
+            "nama" : "Tart Choco Lava",
+            "kategori": "Tart",
+            "harga" : 100000,
+            "src" : "src/images/tart_choco_lava.png"
+        },
+        {
+            "id" : 4,
+            "nama" : "Sugar Psycho (4 pcs)",
+            "kategori": "Donut",
+            "harga" : 20000,
+            "src" : "src/images/sugar_psycho.png"
+        },
+        {
+            "id" : 5,
+            "nama" : "Psycho Pops (6 pcs)",
+            "kategori": "Donut",
+            "harga" : 30000,
+            "src" : "src/images/psycho_pops.png"
+        },
+        {
+            "id" : 6,
+            "nama" : "Luster (2 pcs)",
+            "kategori": "Donut",
+            "harga" : 8000,
+            "src" : "src/images/luster.png"
+        },
+        {
+            "id" : 7,
+            "nama" : "Philo (1 pcs)",
+            "kategori": "Brownies",
+            "harga" : 5000,
+            "src" : "src/images/philo.png"
+        },
+        {
+            "id" : 8,
+            "nama" : "Brownies Choco (1 pcs)",
+            "kategori": "Brownies",
+            "harga" : 5000,
+            "src" : "src/images/brownies_choco.png"
+        },
+        {
+            "id" : 9,
+            "nama" : "Philomenes (3 pcs)",
+            "kategori": "Brownies",
+            "harga" : 18000,
+            "src" : "src/images/philomenes.png"
+        },
+        {
+            "id" : 10,
+            "nama" : "Lovely (2 pcs)",
+            "kategori": "Biscuits & Cookies",
+            "harga" : 8000,
+            "src" : "src/images/lovely.png"
+        },
+        {
+            "id" : 11,
+            "nama" : "Snow (2 pcs)",
+            "kategori": "Biscuits & Cookies",
+            "harga" : 8000,
+            "src" : "src/images/snow.png"
+        },
+        {
+            "id" : 12,
+            "nama" : "Melted (2 pcs)",
+            "kategori": "Biscuits & Cookies",
+            "harga" : 8000,
+            "src" : "src/images/melted.png"
+        }
+    ],
+    "keranjang":[]
+}
