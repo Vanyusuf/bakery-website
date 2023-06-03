@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    --davidLibre : 'David Libre', serif;
+}
+/* ::-webkit-scrollbar{
+    height: 2px;
+} */
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #F9A56A;
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+.new-produk{
+    background-color: #f9a66a48;
+    padding: 20px 0;
+}
+.title-new-produk h2{
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'David Libre', serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+.container-new-produk{
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+}
+.container-new-produk .new-produk-img{
+    width: 50%;
+}
+.container-new-produk .new-produk-img img{
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.container-new-produk .description-new-produk{
+    width: 50%;
+    justify-content: center;
+}
+.container-new-produk .description-new-produk .container-description{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.description-new-produk .container-description .bolu{
+    color: #F9A56A;
+}
+.description-new-produk .container-description .coklat{
+    color: #52211B;
+}
+.description-new-produk .container-description .lumer{
+    color: #CF1A23;
+}
+.container-new-produk .description-new-produk .buy-now{
+    padding: 20px 0;
+    border: none;
+    max-width: 250px;
+    background: linear-gradient(153.63deg, #F9A56A 24.21%, #FF3333 136.1%);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Awal Search dan Kategori */
+.container-search-kategori{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.container-search-kategori .produk{
+    text-align: center;
+    font-family: 'David Libre', serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.container-search-kategori .search-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(1px 6px 8px #c0bdbd); 
+}
+.container-search-kategori .search-input{
+    width: 400px;
+    padding: 15px 16px;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    border: 1px solid #BCBCBC;
+}
+.container-search-kategori .btn-search{
+    padding: 10px 18px;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+.kategori-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.kategori-container .kategori{
+    border: 1px solid #F9A56A;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(249, 165, 106, 0.2);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.kategori-container .kategori img{
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+.kategori-container .active{
+    background-color: #F9A56A;
+}
+.kategori-container .kategori p{
+    font-size: 16px;
+}
+/* Akhir Search dan Kategori */
+
+
+/* Awal card */
+.container-cards{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+.card{
+    border: 1px solid #BCBCBC;
+    display: grid;
+    gap: 14px;
+    border-radius: 10px;
+}
+.card .card-img{
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card .card-img img{
+    width: 50%;
+}
+.card .container-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px;
+}
+.container-title .fa-star{
+    color: #E1A438;
+}
+.card .container-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8px;
+}
+.card .container-price .counter{
+    display: flex;
+}
+.card .container-price .counter .kurang,.value,.tambah{
+    padding: 5px 12px;
+    border: 1px solid #BCBCBC;
+}
+.card .container-price .counter .kurang{
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+}
+.card .container-price .counter .tambah{
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.card .container-btn{
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .container-btn .btn-buy{
+    border: none;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: whitesmoke;
+    background: linear-gradient(150.02deg, #F9A56A 5.2%, #FF3333 268.63%);
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 0 10px #FF3333;
+}
+.card .container-btn .material-symbols-outlined{
+    overflow: hidden;
+}
+/* Akhir card */
