@@ -28,7 +28,7 @@ const renderProduk = (allProduk) =>{
                 </div>
             </div>
             <div class="container-btn">
-                <button class="btn-buy"><span class="material-symbols-outlined">shopping_cart</span>ADD TO CART</button>
+                <button class="btn-buy" onclick="add('${produk.src}','${produk.nama}',${produk.harga},parseInt(this.parentElement.previousElementSibling.querySelector('.value').innerText))"><span class="material-symbols-outlined">shopping_cart</span>ADD TO CART</button>
             </div>
         </div>    
         `
@@ -57,7 +57,7 @@ const tambahKuantiti = (counter) => {
 // Fungsi Kurang Kuantiti
 const kurangKuantiti = (counter) => {
     let value = parseInt(counter.innerText);
-    if(value > 0){
+    if(value > 1){
         value -= 1;
     }
     counter.innerHTML = value;
@@ -67,6 +67,7 @@ const kurangKuantiti = (counter) => {
 // Fungsi Searching produk
 const searchInput = document.querySelector(".search-input");
 const containerCards = document.querySelector(".container-cards");
+
 
 const search = () =>{
     searchInput.addEventListener("keyup", () => {
@@ -156,3 +157,65 @@ const filterKategori = () => {
 };
 
 filterKategori();
+
+
+// addToCart()
+const cart = [];
+
+const add = (image,name,price,quantity) =>{
+    const cartItem = {
+        img : image,
+        nama : name,
+        harga : price,
+        kuantitas : quantity
+    }
+    cart.push(cartItem);
+    console.log(cart)
+    let cartLenght = getTotal(cart)
+    console.log(cartLenght)
+    addToCart(cartLenght)
+};
+
+let cartItemValue = document.querySelector(".cart-item");
+const addToCart = (a) =>{
+    cartItemValue.innerHTML = a;
+};
+
+const getTotal = (cart) => {
+    let total = 0;
+    for (const item of cart) {
+        total += item.kuantitas;
+    }
+    return total
+}
+
+
+// Fitur Hover Keranjang
+const icon = document.querySelector(".icon");
+const cartWrapper = document.querySelector(".cart-wrapper");
+
+icon.addEventListener("mouseover", ()=>{
+    cartWrapper.style.display = 'block';
+})
+
+document.addEventListener("click", (e) =>{
+    const isInsideCartWrapper = cartWrapper.contains(e.target);
+    if(!isInsideCartWrapper){
+        cartWrapper.style.display = 'none';
+    }
+})
+
+// Fitur Hover Akun Saya
+const imgProfile = document.querySelector(".img-profile");
+const akunSayaWrapper = document.querySelector(".akun-saya-wrapper");
+
+imgProfile.addEventListener("mouseover", () =>{
+    akunSayaWrapper.style.display = 'flex';
+})
+
+document.addEventListener("click", (e) =>{
+    const isInsideAkunSayaWrapper = akunSayaWrapper.contains(e.target);
+    if (!isInsideAkunSayaWrapper) {
+        akunSayaWrapper.style.display = 'none';
+    }
+})

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #EEFFEE;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+    /* padding: 0 15px; */
+}
+header{
+    padding: 2rem 0;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+}
+.top-header{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.top-header .fa-arrow-left{
+    font-size: 2rem;
+    color: black;
+}
+.top-header .back-home{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.akun-info-container{
+    display: flex;
+}
+.left-akun{
+    width: 30%;
+    background-color: #F9A56A;
+    border-radius: 0 40px 0 0;
+    min-height: 100vh;
+}
+.left-akun .left-akun-top{
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0 40px 0 0;
+}
+.left-akun .left-akun-top img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.left-akun .left-akun-bottom{
+    display: flex;
+    justify-content: center;
+}
+.left-akun .left-akun-bottom .menu-profile{
+    width: 220px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.70);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 20px;
+    margin-top: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.right-akun{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 0 25px;
+}
+.right-akun .profil-saya-wrap{
+    border: 1px solid black;
+    padding: 10px 12px;
+    width: 100%;
+}
+.right-akun .profil-saya-info{
+    border: 1px solid black;
+    padding: 10px 12px;
+    text-align: left;
+    margin-top: 20px;
+}
+th,td{
+    padding: 20px 20px 20px 0;
+}
+button{
+    border: none;
+}

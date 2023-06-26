@@ -1,0 +1,113 @@
+header{
+    background-color: white;
+}
+.total-harga{
+    color: #FF7E24;
+}
+.top-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.top-header .fa-arrow-left{
+    font-size: 2rem;
+    color: black;
+}
+.top-header h4{
+    border-left: 3px solid #000;
+    padding: 18px 10px;
+}
+
+/* Keranjang Info */
+.keranjang-info-wrap{
+    margin-bottom: 45px;
+}
+.keranjang-info-title{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F6F5F5;
+    align-items: center;
+    padding: 10px 20px;
+}
+.keranjang-info-title .left{
+    display: flex;
+    gap: 20px;
+}
+.keranjang-info-title .left input{
+    width: 20px;
+}
+.keranjang-info-title .right{
+    display: flex;
+    gap: 20px;
+}
+.keranjang-info-title .right h5{
+    padding: 10px 20px;
+}
+
+.keranjang-produk-wrap{
+    margin-bottom: 20px;
+}
+.keranjang-produk{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #F6F5F5;
+    align-items: center;
+}
+.keranjang-produk .left{
+    display: flex;
+    gap: 20px;
+}
+.keranjang-produk .left .content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.keranjang-produk .left input{
+    width: 20px;
+}
+.keranjang-produk .right{
+    display: flex;
+    align-items: center;
+}
+.keranjang-produk .right .counter{
+    display: flex;
+    /* border: 1px solid green; */
+    align-items: center;
+}
+.keranjang-produk .right h5{
+    padding: 10px 35px;
+}
+
+/* Checkout */
+.checkout-wrap{
+    margin-top: 245px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+.checkout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #F6F5F5;
+    box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.checkout .left{
+    display: flex;
+    gap: 20px;
+}
+.checkout .left input{
+    width: 20px;
+}
+.checkout .right button{
+    border: none;
+}
+.checkout .right{
+    display: flex;
+    padding: 10px 20px;
+    gap: 20px;
+    align-items: center;
+}
