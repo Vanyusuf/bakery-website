@@ -18,49 +18,74 @@
     border-radius: 20px;
     background-color: #F9A56A;
 }
-header{
-    padding: 12px 0;
-    background-color: navy;
+.wrap{
+    background-color: white;
     top: 0;
     left: 0;
     right: 0;
     position: fixed;
-    z-index: 3;
-    margin-bottom: 20px;
 }
-.nav-container{
-    color: white;
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid green; */
 }
-.nav-container nav{
-    padding: 10px;
-    position: relative;
+.navbar nav ul{
+    display: flex;
+    gap: 20px;
 }
-.nav-container nav span{
-    color: white;
-    font-size: 20px;
-    text-align: center;
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
 }
-.cart-item{
-    position: absolute;
-    top: 0;
-    left: 22px;
-    width: 20px;
-    height: 20px;
+/* .navbar ul li a{
+} */
+.akun-img{
+    border-radius: 50%;
+}
+.akun-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: auto;
-    border-radius: 20%;
-    background-color: darkseagreen;
+    gap: 35px;
 }
+/* .akun-container a{
+    position: relative;
+} */
 .container{
     max-width: 1140px;
     margin: auto;
     padding: 0 15px;
+    /* border: 1px solid blue; */
+}
+/* .container-keranjang{
+    position: relative;
+    margin-top: 100px;
+} */
+.banner{
+    display: flex;
+    margin-top: 110px;
+    padding-top: 30px;
+    height: 90vh;
+}
+.banner-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    /* justify-content: center; */
+    gap: 60px;
+}
+.banner-left h2{
+    font-size: 44pt;
+}
+.lihat_produk{
+    width: 200px;
+}
+.banner-right{
+    flex: 1;
+}
+.img-banner{
+    border-radius: 90px 90px 0 0;
 }
 .new-produk{
     background-color: #f9a66a48;
@@ -108,7 +133,18 @@ header{
 .description-new-produk .container-description .lumer{
     color: #CF1A23;
 }
-.container-new-produk .description-new-produk .buy-now{
+/* .container-new-produk .description-new-produk .buy-now{
+    padding: 20px 0;
+    border: none;
+    max-width: 250px;
+    background: linear-gradient(153.63deg, #F9A56A 24.21%, #FF3333 136.1%);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+} */
+.buy-now{
     padding: 20px 0;
     border: none;
     max-width: 250px;
@@ -270,3 +306,52 @@ header{
     overflow: hidden;
 }
 /* Akhir card */
+
+.container-keranjang{
+    position: absolute;
+    margin-top: 150px;
+    width: 450px;
+    /* height: 800px; */
+    background-color: white;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px 12px;
+    top: 100%;
+    /* height: 400p1x; */
+}
+.cart-container{
+    background-color: white;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.produk-keranjang{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tampil-keranjang{
+    display: flex;
+    justify-content: end;
+}
+.tampil-keranjang a{
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #E1A438;
+}
+/* .container-keranjang .produk-keranjang{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
+} */
