@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="src/css/keranjang.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 </head>
+
 <body>
-    <a href="index.html">back to home</a>
-    <h2>produk Keranjang</h2>
+    <header>
+        <div class="container top-header">
+            <a href="index.html"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
+            <img src="src/images/Brown Elegant Concept Coffee Shop And Bakery Logo.png" alt="logo" width="80">
+            <h4>Keranjang Belanja</h4>
+        </div>
+    </header>
+    <section class="keranjang-info-wrap">
+        <div class="container keranjang-info-title">
+            <div class="left">
+                <input type="checkbox" name="" id="">
+                <label for="">Produk</label>
+            </div>
+            <div class="right">
+                <h5>Harga Satuan</h5>
+                <h5>Kuantitas</h5>
+                <h5>Total Harga</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="keranjang-produk-wrap">
+        <div class="container keranjang-produk">
+            <div class="left">
+                <input type="checkbox" name="" id="">
+                <div class="content">
+                    <img src="src/images/luster.png" alt="" width="90">
+                    <h4>Luster</h4>
+                </div>
+            </div>
+            <div class="right">
+                <h5>Rp.8000</h5>
+                <div class="counter">
+                    <div class="kurang" onclick="kurangKuantiti(this.nextElementSibling)">-</div>
+                    <div class="value">1</div>
+                    <div class="tambah" onclick="tambahKuantiti(this.previousElementSibling)">+</div>
+                </div>
+                <h5 class="total-harga">Rp.100000</h5>
+            </div>
+        </div>
+    </section>
+    <section class="keranjang-produk-wrap">
+        <div class="container keranjang-produk">
+            <div class="left">
+                <input type="checkbox" name="" id="">
+                <div class="content">
+                    <img src="src/images/tart_choco_lava.png" alt="" width="90">
+                    <h4>Tart Choco Lava</h4>
+                </div>
+            </div>
+            <div class="right">
+                <h5>Rp.100000</h5>
+                <div class="counter">
+                    <div class="kurang" onclick="kurangKuantiti(this.nextElementSibling)">-</div>
+                    <div class="value">1</div>
+                    <div class="tambah" onclick="tambahKuantiti(this.previousElementSibling)">+</div>
+                </div>
+                <h5 class="total-harga">Rp.100000</h5>
+            </div>
+        </div>
+    </section>
+    <section class="keranjang-produk-wrap">
+        <div class="container keranjang-produk">
+            <div class="left">
+                <input type="checkbox" name="" id="">
+                <div class="content">
+                    <img src="src/images/brownies_choco.png" alt="" width="90">
+                    <h4>Brownies Lava</h4>
+                </div>
+            </div>
+            <div class="right">
+                <h5>Rp.5000</h5>
+                <div class="counter">
+                    <div class="kurang" onclick="kurangKuantiti(this.nextElementSibling)">-</div>
+                    <div class="value">1</div>
+                    <div class="tambah" onclick="tambahKuantiti(this.previousElementSibling)">+</div>
+                </div>
+                <h5 class="total-harga">Rp.100000</h5>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="mt" style="margin-top: 150px;"></div> -->
+    <section class="checkout-wrap">
+        <div class="container checkout">
+            <div class="left">
+                <input type="checkbox" name="" id="">
+                <label for="">Pilih Semua</label>
+            </div>
+            <div class="right">
+                <h5 class="total-produk">Total Produk (0 Produk)</h5>
+                <h5 class="total-harga">Rp.100000</h5>
+                <button class="btn-primary">Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script/main.js"></script>
 </body>
+
 </html>
