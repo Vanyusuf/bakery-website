@@ -29,6 +29,23 @@
         height: 100%;
         width: 100%;
     }
+    .kirim{
+        display: flex;
+        flex-direction: column;
+    }
+    .iconsss{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconsss img{
+        width: 50px;
+    }
+    .iconsss p{
+        font-size: 12pt;
+    }
     .new-produk{
         padding: 20px 0;
     }
