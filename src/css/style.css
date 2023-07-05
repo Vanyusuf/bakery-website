@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500&display=swap');
-
-
-
 *{
     padding: 0;
     margin: 0;
@@ -13,20 +9,10 @@
 html{
     scroll-behavior: smooth;
 }
-:root{
-    --davidLibre : 'David Libre', serif;
-}
 .container{
     max-width: 1140px;
     margin: auto;
     padding: 0 15px;
-}
-/* ::-webkit-scrollbar{
-    height: 2px;
-} */
-::-webkit-scrollbar-thumb{
-    border-radius: 20px;
-    background-color: #F9A56A;
 }
 .nav-container{
     position: fixed;
@@ -77,26 +63,29 @@ nav ul li a{
     align-items: center;
     border-radius: 5px;
     position: absolute;
-    top: 2px;
+    top: -8px;
     right: 4px;
 }
 .akun-wrapper .img-profile{
     border-radius: 50%;
     cursor: pointer;
 }
-/* Awal Keranjang */
-.cart-wrapper{
-    display: none;
-    width: 450px;
-    padding: 16px 16px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    position: absolute;
-    top: 80%;
-    border: 1px solid rgb(190, 189, 189);
-    right: 60px;
+.dropdown{
+    position: relative;
 }
+/* Awal Keranjang */
+.dropdown-cart{
+    position: absolute;
+    display: none;
+    padding-top: 10px;
+    /* border: 1px solid blue; */
+    
+}
+
+/* .dropdown:hover .dropdown-cart{
+    display: block;
+} */
+
 .cart-wrapper h6{
     font-size: 18px;
     color: gray;
@@ -179,7 +168,7 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     margin-top: 3rem;
 }
 .banner-left h2{
@@ -201,6 +190,7 @@ nav ul li a{
     cursor: pointer;
     color: black;
     border: 1px solid #FF3333;
+    /* background-color: #4F709C; */
 }
 .btn-promo:hover{
     background: linear-gradient(150.02deg, #F9A56A 5.2%, #FF3333 268.63%);
@@ -433,11 +423,11 @@ nav ul li a{
     cursor: pointer;
     color: white;
     background: linear-gradient(150.02deg, #F9A56A 5.2%, #FF3333 268.63%);
-    /* overflow-y: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
-    justify-content: center; */
-    /* gap: 20px; */
+    justify-content: center;
+    gap: 10px;
     text-align: center;
 }
 .card .container-btn .btn-buy:hover{

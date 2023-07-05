@@ -1,37 +1,41 @@
 const allProduk = 'data/produk.json';
 
+const isi  = (produk) =>{
+    return `
+    <div class="card">
+        <div class="card-img">
+            <img src="${produk.src}" alt="${produk.nama}">
+        </div>
+        <div class="container-title">
+            <h4 class="produk-name">${produk.nama}</h4>
+            <div class="star-rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+        </div>
+        <div class="container-price">
+            <h5>Rp.${produk.harga}</h5>
+            <div class="counter">
+                <div class="kurang" onclick="kurangKuantiti(this.nextElementSibling)">-</div>
+                <div class="value">1</div>
+                <div class="tambah" onclick="tambahKuantiti(this.previousElementSibling)">+</div>
+            </div>
+        </div>
+        <div class="container-btn">
+            <button class="btn-buy" onclick="add('${produk.src}','${produk.nama}',${produk.harga},parseInt(this.parentElement.previousElementSibling.querySelector('.value').innerText))"><span class="material-symbols-outlined">shopping_cart</span>ADD TO CART</button>
+        </div>
+    </div>    
+    `
+}
+
 const renderProduk = (allProduk) =>{
     let content = '';
     const containerCards = document.querySelector(".container-cards");
     allProduk.forEach(produk => {
-        content += `
-        <div class="card">
-            <div class="card-img">
-                <img src="${produk.src}" alt="${produk.nama}">
-            </div>
-            <div class="container-title">
-                <h4 class="produk-name">${produk.nama}</h4>
-                <div class="star-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-            </div>
-            <div class="container-price">
-                <h5>Rp.${produk.harga}</h5>
-                <div class="counter">
-                    <div class="kurang" onclick="kurangKuantiti(this.nextElementSibling)">-</div>
-                    <div class="value">1</div>
-                    <div class="tambah" onclick="tambahKuantiti(this.previousElementSibling)">+</div>
-                </div>
-            </div>
-            <div class="container-btn">
-                <button class="btn-buy" onclick="add('${produk.src}','${produk.nama}',${produk.harga},parseInt(this.parentElement.previousElementSibling.querySelector('.value').innerText))"><span class="material-symbols-outlined">shopping_cart</span>ADD TO CART</button>
-            </div>
-        </div>    
-        `
+        content += isi(produk)
     });
     containerCards.innerHTML = content;
 }
@@ -119,34 +123,7 @@ const filterKategori = () => {
                         const containerCards = document.querySelector(".container-cards");
                         data.produks.forEach(produk =>{
                             if (namaProduk.toLowerCase() == produk.kategori.toLowerCase()) {
-                                content += `
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="${produk.src}" alt="${produk.nama}">
-                                    </div>
-                                    <div class="container-title">
-                                        <h4 class="produk-name">${produk.nama}</h4>
-                                        <div class="star-rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                    </div>
-                                    <div class="container-price">
-                                        <h5>Rp.${produk.harga}</h5>
-                                        <div class="counter">
-                                            <div class="kurang" onclick="kurangKuantiti(this.nextElementSibling)">-</div>
-                                            <div class="value">1</div>
-                                            <div class="tambah" onclick="tambahKuantiti(this.previousElementSibling)">+</div>
-                                        </div>
-                                    </div>
-                                    <div class="container-btn">
-                                        <button class="btn-buy"><span class="material-symbols-outlined">shopping_cart</span>ADD TO CART</button>
-                                    </div>
-                            </div>    
-                                `
+                                content += isi(produk);
                             };
                             containerCards.innerHTML = content;
                         })
@@ -190,32 +167,51 @@ const getTotal = (cart) => {
 }
 
 
+const mediaQueryMobile = window.matchMedia(('max-width : 576px'));
+const mediaQueryTab = window.matchMedia(('max-width : 884px'));
+// const mediaQueryLaptop = window.matchMedia(('max-width : 576px'));
+
+
 // Fitur Hover Keranjang
-const icon = document.querySelector(".icon");
-const cartWrapper = document.querySelector(".cart-wrapper");
+// const dropdown = document.querySelector(".dropdown");
+// const dropdownCart = document.querySelector(".dropdown-cart");
+// if(mediaQueryMobile.matches){
+//     dropdown.addEventListener("mouseover", ()=>{
+//         dropdownCart.style.display = 'none';
+//     })
+//     dropdown.addEventListener("mouseleave", ()=>{
+//         dropdownCart.style.display = 'none';
+//     })
+    
+// } else{
+//     dropdown.addEventListener("mouseover", ()=>{
+//         dropdownCart.style.display = 'block';
+//     })
+//     dropdown.addEventListener("mouseleave", ()=>{
+//         dropdownCart.style.display = 'none';
+//     })
+    
+// }
 
-icon.addEventListener("mouseover", ()=>{
-    cartWrapper.style.display = 'block';
-})
 
-document.addEventListener("click", (e) =>{
-    const isInsideCartWrapper = cartWrapper.contains(e.target);
-    if(!isInsideCartWrapper){
-        cartWrapper.style.display = 'none';
-    }
-})
+// document.addEventListener("click", (e) =>{
+//     const isInsideCartWrapper = cartWrapper.contains(e.target);
+//     if(!isInsideCartWrapper){
+//         cartWrapper.style.display = 'none';
+//     }
+// })
 
 // Fitur Hover Akun Saya
-const imgProfile = document.querySelector(".img-profile");
-const akunSayaWrapper = document.querySelector(".akun-saya-wrapper");
+// const imgProfile = document.querySelector(".img-profile");
+// const akunSayaWrapper = document.querySelector(".akun-saya-wrapper");
 
-imgProfile.addEventListener("mouseover", () =>{
-    akunSayaWrapper.style.display = 'flex';
-})
+// imgProfile.addEventListener("mouseover", () =>{
+//     akunSayaWrapper.style.display = 'flex';
+// })
 
-document.addEventListener("click", (e) =>{
-    const isInsideAkunSayaWrapper = akunSayaWrapper.contains(e.target);
-    if (!isInsideAkunSayaWrapper) {
-        akunSayaWrapper.style.display = 'none';
-    }
-})
+// document.addEventListener("click", (e) =>{
+//     const isInsideAkunSayaWrapper = akunSayaWrapper.contains(e.target);
+//     if (!isInsideAkunSayaWrapper) {
+//         akunSayaWrapper.style.display = 'none';
+//     }
+// })
