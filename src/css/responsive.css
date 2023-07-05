@@ -2,6 +2,12 @@
     nav{
         display: none;
     }
+    .img-profile{
+        display: none;
+    }
+    .hamburger i{
+        font-size: 20px;
+    }
     .banner{
         flex-direction: column;
         align-items: center;
@@ -180,6 +186,9 @@
 }
 
 @media (min-width : 768px) {
+    .hamburger i{
+        display: none;
+    }
     .container-cards{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -201,14 +210,14 @@
         font-size: 14px;
         color: gray;
     }
-    .cart-container .cart-shop .cart-img-wrapper{
-        display: flex;
-        align-items: center;
-        /* gap: 6px; */
-        width: 10px;
+    .cart-container .cart-shop .cart-img-wrapper p{
+        font-size: 14px;
     }
 }
 @media screen and (min-width : 1200px) {
+    .hamburger i{
+        display: none;
+    }
     .dropdown:hover .cart-wrapper{
         display: block;
     }

@@ -221,9 +221,9 @@ nav ul li a{
 .kirim{
     display: flex;
     justify-content: space-around;
-    /* border: 1px solid black; */
     align-items: center;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 0;
 }
 .iconsss{
     display: flex;

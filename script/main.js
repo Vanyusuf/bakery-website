@@ -167,23 +167,15 @@ const getTotal = (cart) => {
 }
 
 
-const mediaQueryMobile = window.matchMedia(('max-width : 576px'));
-const mediaQueryTab = window.matchMedia(('max-width : 884px'));
-// const mediaQueryLaptop = window.matchMedia(('max-width : 576px'));
+// const mediaQueryTab = window.matchMedia(('min-width: 768px'));
+// const mediaQueryLaptop = window.matchMedia(('min-width: 1200px'));
+// const mediaQueryMobile = window.matchMedia(('max-width: 576px'));
 
 
-// Fitur Hover Keranjang
+// // Fitur Hover Keranjang
 // const dropdown = document.querySelector(".dropdown");
 // const dropdownCart = document.querySelector(".dropdown-cart");
-// if(mediaQueryMobile.matches){
-//     dropdown.addEventListener("mouseover", ()=>{
-//         dropdownCart.style.display = 'none';
-//     })
-//     dropdown.addEventListener("mouseleave", ()=>{
-//         dropdownCart.style.display = 'none';
-//     })
-    
-// } else{
+// if(mediaQueryTab.matches){
 //     dropdown.addEventListener("mouseover", ()=>{
 //         dropdownCart.style.display = 'block';
 //     })
@@ -191,6 +183,18 @@ const mediaQueryTab = window.matchMedia(('max-width : 884px'));
 //         dropdownCart.style.display = 'none';
 //     })
     
+// } else if(mediaQueryLaptop.matches){
+//     dropdown.addEventListener("mouseover", ()=>{
+//         dropdownCart.style.display = 'block';
+//     })
+//     dropdown.addEventListener("mouseleave", ()=>{
+//         dropdownCart.style.display = 'none';
+//     })
+    
+// } else if(mediaQueryMobile.matches){
+//     dropdown.addEventListener("mouseover", ()=>{
+//         dropdownCart.style.display = 'none';
+//     })
 // }
 
 
