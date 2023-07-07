@@ -178,43 +178,7 @@ window.addEventListener("scroll", () =>{
 });
 
 
-
 // responsive navbar
-// const wrapperNav = document.querySelector(".wrapper-nav nav");
-// const hamburgerBtn = document.querySelector(".hamburger .fa-solid.fa-bars");
-// hamburgerBtn.addEventListener("click", function() {
-//     const bodyElement = document.body;
-//     wrapperNav.classList.toggle("nav-muncul");
-//     if (bodyElement.classList.contains('nav-muncul')) {
-//         hamburgerBtn.classList.remove("fa-bars")
-//         hamburgerBtn.classList.add("fa-xmark")
-//     }else{
-//         hamburgerBtn.classList.remove("fa-xmark")
-//         hamburgerBtn.classList.add("fa-bars")
-//     }
-// })
-
-// const wrapperNav = document.querySelector(".nav");
-// const hamburgerBtn = document.querySelector(".hamburger");
-// const hamburgerBtnIcon = document.querySelector(".hamburger i");
-
-// hamburgerBtn.addEventListener("click", function(e) {
-//   wrapperNav.classList.toggle("nav-muncul");
-//   const isInsideNavMuncul = wrapperNav.classList.contains(e.target)
-//   hamburgerBtnIcon = isInsideNavMuncul ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-// });
-
-// const wrapperNav = document.querySelector(".nav");
-// const hamburgerBtn = document.querySelector(".hamburger");
-// hamburgerBtn.addEventListener("click", function(e) {
-//   wrapperNav.classList.toggle("nav-muncul");
-//   const isInsideNavMuncul = wrapperNav.classList.contains(e.target);
-//   if (!isInsideNavMuncul) {
-//     wrapperNav.style.display = 'none'
-// } else {
-//     wrapperNav.style.display = 'block'
-//   }
-// });
 
 const wrapperNav = document.querySelector(".nav");
 const hamburgerBtn = document.querySelector(".hamburger");
@@ -230,5 +194,3 @@ document.addEventListener("click", function(e) {
     wrapperNav.classList.remove("nav-muncul");
   }
 });
-
-
