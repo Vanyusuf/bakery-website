@@ -1,9 +1,36 @@
 @media (max-width : 576px) {
-    nav{
-        display: none;
+    nav.nav-muncul{
+        left: 0;
     }
-    .img-profile{
-        display: none;
+    nav{
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        z-index: 99;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: all .2s;
+    }
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .active{
+        background-color: #0077ff71;
+        color: white;
+    }
+    nav ul li{
+        width: 90%;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        color: white;
+        background-color: #0077ff27;
     }
     .hamburger i{
         font-size: 20px;
@@ -192,6 +219,7 @@
     }
     .about .left-about p, .right-about p{
         font-size: 13px;
+        margin-top: 10px;
     }
 
     .about .right-about{
@@ -208,6 +236,60 @@
     } 
     .footer1{
         text-align: center;
+    }
+
+
+
+    /* Akun Saya Responsive */
+    .hamburgerAkunSaya{
+        display: flex;
+        padding: 10px;
+    }
+    .muncul{
+        /* left: 0; */
+        transform: translateX(0);
+    }
+    .left-akun{
+        position: fixed;
+        /* left: -100%; */
+        transform: translateX(-100%);
+        /* left: 0; */
+        bottom: 0;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        z-index: 98;
+        transition: all .2s;
+        
+    }
+    .left-akun-muncul{
+        position: fixed;
+        /* left: -100%; */
+        transform: translateX(0);
+        /* left: 0; */
+        bottom: 0;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        z-index: 98;
+        transition: all .2s;
+        
+    }
+
+
+    .right-akun{
+        width: 100%;
+        /* height: 100vh; */
+    }
+    .right-akun .profil-saya-info{
+        flex-direction: column-reverse;
+    }
+    .profil-saya-img-wrap{
+        border: none;
+        padding: 0;
+    }
+    .profil-saya-wrap h3{
+        margin-top: 10px;
     }
 
 }
@@ -240,8 +322,15 @@
     .cart-container .cart-shop .cart-img-wrapper p{
         font-size: 14px;
     }
+    .about .left-about p{
+        margin-top: 30px;
+    }
 }
 @media screen and (min-width : 1200px) {
+    /* .nav ul li{
+        margin-left: 10px;
+        background-color: #0077ff71;
+    } */
     .hamburger i{
         display: none;
     }
@@ -259,5 +348,12 @@
         position: absolute;
         top: 80%;
         border: 1px solid rgb(190, 189, 189);
+    }
+    .kategori-container .kategori:hover{
+        background-color: #F9A56A;
+        transition: all .4s ease;
+    }
+    .about .left-about p{
+        margin-top: 30px;
     }
 }

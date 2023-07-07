@@ -18,6 +18,11 @@ header{
 }
 .top-header{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-header .back{
+    display: flex;
     gap: 10px;
     align-items: center;
 }
@@ -31,14 +36,18 @@ header{
     color: black;
     font-weight: bold;
 }
+.hamburger2{
+    display: none;
+}
 .akun-info-container{
     display: flex;
 }
 .left-akun{
+    box-shadow: 10px 0px 10px 0px rgba(0,0,0,0.1);
     width: 30%;
-    background-color: #F9A56A;
-    border-radius: 0 40px 0 0;
-    min-height: 100vh;
+    background-color: white;
+    /* border-radius: 0 40px 0 0; */
+    height: 100vh;
 }
 .left-akun .left-akun-top{
     text-align: center;
@@ -62,7 +71,7 @@ header{
     /* width: 220px; */
     width: 100%;
     /* height: 50px; */
-    background-color: rgba(255, 255, 255, 0.70);
+    background-color: #0077ff27;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -72,7 +81,7 @@ header{
     cursor: pointer;
 }
 .active{
-    background-color: #4F709C;
+    background-color: #0077ff71;
     color: white;
 }
 .right-akun{
@@ -84,15 +93,50 @@ header{
     padding: 0 25px;
 }
 .right-akun .profil-saya-wrap{
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* background-color: white; */
+    /* box-shadow: 10px 0px 10px 0px rgba(0,0,0,0.1); */
     padding: 10px 12px;
     width: 100%;
 }
+.right-akun .profil-saya-wrap h3{
+    font-size: 28px;
+}
 .right-akun .profil-saya-info{
-    border: 1px solid black;
+    background-color: white;
+    /* box-shadow: 10px 0px 10px 0px rgba(0,0,0,0.1); */
+    border: 1px solid rgb(161, 161, 161);
     padding: 10px 12px;
     text-align: left;
     margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.profil-saya-img-wrap{
+    border-left: 1px solid rgb(179, 179, 179);
+    padding: 10px;
+}
+.profil-saya-img-wrap .img-bg{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(224, 224, 224, 0.685);
+    background-image: url('../images/suga.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+.img-bg-update{
+    margin: 10px 0;
+    text-align: center;
+}
+.img-bg-update p{
+    text-align: left;
+}
+.img-bg-update button{
+    margin-bottom: 10px;
 }
 .btn-update{
     padding: 14px 26px;

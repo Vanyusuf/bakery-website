@@ -136,6 +136,7 @@ const filterKategori = () => {
 filterKategori();
 
 
+// Coming Soon (Semoga aja)
 // addToCart()
 const cart = [];
 
@@ -148,74 +149,48 @@ const add = (image,name,price,quantity) =>{
     }
     cart.push(cartItem);
     console.log(cart)
-    let cartLenght = getTotal(cart)
-    console.log(cartLenght)
-    addToCart(cartLenght)
+    // let cartLenght = getTotal(cart)
+    // console.log(cartLenght)
+    // addToCart(cartLenght)
 };
 
-let cartItemValue = document.querySelector(".cart-item");
-const addToCart = (a) =>{
-    cartItemValue.innerHTML = a;
-};
+// let cartItemValue = document.querySelector(".cart-item");
+// const addToCart = (a) =>{
+//     cartItemValue.innerHTML = a;
+// };
 
-const getTotal = (cart) => {
-    let total = 0;
-    for (const item of cart) {
-        total += item.kuantitas;
-    }
-    return total
-}
-
-
-// const mediaQueryTab = window.matchMedia(('min-width: 768px'));
-// const mediaQueryLaptop = window.matchMedia(('min-width: 1200px'));
-// const mediaQueryMobile = window.matchMedia(('max-width: 576px'));
-
-
-// // Fitur Hover Keranjang
-// const dropdown = document.querySelector(".dropdown");
-// const dropdownCart = document.querySelector(".dropdown-cart");
-// if(mediaQueryTab.matches){
-//     dropdown.addEventListener("mouseover", ()=>{
-//         dropdownCart.style.display = 'block';
-//     })
-//     dropdown.addEventListener("mouseleave", ()=>{
-//         dropdownCart.style.display = 'none';
-//     })
-    
-// } else if(mediaQueryLaptop.matches){
-//     dropdown.addEventListener("mouseover", ()=>{
-//         dropdownCart.style.display = 'block';
-//     })
-//     dropdown.addEventListener("mouseleave", ()=>{
-//         dropdownCart.style.display = 'none';
-//     })
-    
-// } else if(mediaQueryMobile.matches){
-//     dropdown.addEventListener("mouseover", ()=>{
-//         dropdownCart.style.display = 'none';
-//     })
+// const getTotal = (cart) => {
+//     let total = 0;
+//     for (const item of cart) {
+//         total += item.kuantitas;
+//     }
+//     return total
 // }
 
+// efek shadow ketika navbar discroll
+const navContainer = document.querySelector(".nav-container");
+window.addEventListener("scroll", () =>{
+    if (window.scrollY > 10) {
+        navContainer.classList.add("box-shadow")
+    }else{
+        navContainer.classList.remove("box-shadow")
+    }
+});
 
-// document.addEventListener("click", (e) =>{
-//     const isInsideCartWrapper = cartWrapper.contains(e.target);
-//     if(!isInsideCartWrapper){
-//         cartWrapper.style.display = 'none';
-//     }
-// })
 
-// Fitur Hover Akun Saya
-// const imgProfile = document.querySelector(".img-profile");
-// const akunSayaWrapper = document.querySelector(".akun-saya-wrapper");
+// responsive navbar
 
-// imgProfile.addEventListener("mouseover", () =>{
-//     akunSayaWrapper.style.display = 'flex';
-// })
+const wrapperNav = document.querySelector(".nav");
+const hamburgerBtn = document.querySelector(".hamburger");
 
-// document.addEventListener("click", (e) =>{
-//     const isInsideAkunSayaWrapper = akunSayaWrapper.contains(e.target);
-//     if (!isInsideAkunSayaWrapper) {
-//         akunSayaWrapper.style.display = 'none';
-//     }
-// })
+hamburgerBtn.addEventListener("click", function(e) {
+  wrapperNav.classList.toggle("nav-muncul");
+});
+
+document.addEventListener("click", function(e) {
+  const targetElement = e.target;
+
+  if (!targetElement.closest(".nav") && !targetElement.closest(".hamburger")) {
+    wrapperNav.classList.remove("nav-muncul");
+  }
+});
