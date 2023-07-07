@@ -9,6 +9,9 @@
 html{
     scroll-behavior: smooth;
 }
+.box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
 .container{
     max-width: 1140px;
     margin: auto;
@@ -341,10 +344,7 @@ nav ul li a{
     margin-bottom: 20px;
     cursor: pointer;
 }
-.kategori-container .kategori:hover{
-    background-color: #F9A56A;
-    transition: all .4s ease;
-}
+
 .kategori-container .kategori img{
     background-position: center;
     background-size: cover;

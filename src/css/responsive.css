@@ -1,9 +1,36 @@
 @media (max-width : 576px) {
-    nav{
-        display: none;
+    nav.nav-muncul{
+        left: 0;
     }
-    .img-profile{
-        display: none;
+    nav{
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        z-index: 99;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: all .2s;
+    }
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .active{
+        background-color: #0077ff71;
+        color: white;
+    }
+    nav ul li{
+        width: 90%;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        color: white;
+        background-color: #0077ff27;
     }
     .hamburger i{
         font-size: 20px;
@@ -232,5 +259,9 @@
         position: absolute;
         top: 80%;
         border: 1px solid rgb(190, 189, 189);
+    }
+    .kategori-container .kategori:hover{
+        background-color: #F9A56A;
+        transition: all .4s ease;
     }
 }
