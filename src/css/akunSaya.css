@@ -36,7 +36,7 @@ header{
     color: black;
     font-weight: bold;
 }
-.hamburger2{
+.hamburgerAkunSaya{
     display: none;
 }
 .akun-info-container{
@@ -86,11 +86,10 @@ header{
 }
 .right-akun{
     width: 70%;
-    display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     padding: 0 25px;
+    flex: 1;
 }
 .right-akun .profil-saya-wrap{
     /* border: 1px solid black; */
