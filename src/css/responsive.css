@@ -35,6 +35,9 @@
     .hamburger i{
         font-size: 20px;
     }
+    .hamburgerAkunSaya i{
+        font-size: 20px;
+    }
     .banner{
         flex-direction: column;
         align-items: center;
@@ -96,7 +99,7 @@
         margin-top: 20px;
         gap: 10px;
     }
-    .container-search-kategori .produk{
+    .produk{
         font-size: 26px;
     }
     .container-new-produk .new-produk-img{
@@ -218,7 +221,7 @@
         width: 100%;
     }
     .about .left-about p, .right-about p{
-        font-size: 13px;
+        font-size: 16px;
         margin-top: 10px;
     }
 
