@@ -301,7 +301,7 @@ nav ul li a:hover{
     justify-content: center;
     margin-top: 15px;
 }
-.container-search-kategori .produk{
+.produk{
     text-align: center;
     font-family: 'David Libre', serif;
     font-weight: 500;
@@ -489,16 +489,19 @@ iframe{
 .about{
     display: flex;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .left-about,.right-about{
     width: 50%;
 }
 
-#AboutUs h2{
+/* #AboutUs h2{
     text-align: center;
+    font-family: 'David Libre', serif;
     margin-bottom: 30px;
-}
+    font-size: 40px;
+} */
 
 .about p{
     font-size: 25px;
