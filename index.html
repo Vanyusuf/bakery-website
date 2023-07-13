@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -102,7 +103,7 @@
 
     <!--pengiriman cepat-->
     <div class="container">
-        <div class="kirim">
+        <div class="kirim" data-aos="fade-up">
             <div class="iconsss">
                 <img src="./src/images/icons8-in-transit-100 1.png" alt="" width="50px">
                 <p>PENGIRIMAN CEPAT</p>
@@ -126,10 +127,10 @@
                 <h2>Produk Terbaru Kami</h2>
             </div>
             <div class="container-new-produk">
-                <section class="new-produk-img">
+                <section class="new-produk-img" data-aos="fade-right">
                     <img src="./src/images/Group 35.png" alt="" width="100%" />
                 </section>
-                <section class="description-new-produk">
+                <section class="description-new-produk" data-aos="fade-up" data-aos-delay="300">
                     <div class="container-description">
                         <h2>
                             <span class="bolu">TART</span><span class="coklat"> COKLAT</span><span class="lumer">
@@ -179,21 +180,21 @@
 
 
     <!-- Awal Section Card  -->
-    <section class="container container-cards" id="produk"></section>
+    <section class="container container-cards" data-aos="fade-up" id="produk"></section>
     <!-- Akhir Section Card  -->
 
     <!-- Awal Abuut Us -->
     <section id="AboutUs">
         <h2 class="produk">Tentang Kami</h2>
         <div class="container about">
-            <div class="left-about">
+            <div class="left-about" data-aos="fade-right">
                 <img src="./src/images/gambar.jpg" alt="gambar">
                 <p>Roti Psycho awalnya hanya melayani pembelian ditempat, sempitnya target custumer menyebabkan toko
                     itu tidak popular secara signifikan. Ketidak adanya informasi katalog penjualan juga menyebabkan
                     minimnya informasi yang didapat pelanggan mengenai produk dan layanan yang ditawarkan oleh Toko
                     Roti Psycho.</p>
             </div>
-            <div class="right-about">
+            <div class="right-about" data-aos="fade-up" data-aos-delay="300">
                 <p>Toko Roti Psycho adalah Toko Roti yang menjual berbagai macam jenis roti seperti tar, biscuit &
                     Cookies, donat, brownis, bahkan toko ini juga menyediakan pai dan menu untuk breakfast. Toko
                     roti ini berlokasi di jalan Thamrin.</p>
@@ -205,7 +206,7 @@
 
     <!--Lokasi-->
     <div class="container lokasi">
-        <h1>Lokasi Kami</h1>
+        <h2 class="produk">Lokasi Kami</h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.999810734873!2d98.68817087492455!3d3.587517296386651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131b05672220d%3A0xba277a5eddb19abe!2sUniversitas%20Mikroskil%2C%20Kampus%20B!5e0!3m2!1sid!2sid!4v1687767210758!5m2!1sid!2sid"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -275,7 +276,10 @@
     <!-- <script src="script/script.js"></script> -->
     <!-- <script src="script/main.js">
         </script> -->
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script/main.js"></script>
 
 </body>
