@@ -136,37 +136,6 @@ const filterKategori = () => {
 filterKategori();
 
 
-// Coming Soon (Semoga aja)
-// addToCart()
-const cart = [];
-
-const add = (image,name,price,quantity) =>{
-    const cartItem = {
-        img : image,
-        nama : name,
-        harga : price,
-        kuantitas : quantity
-    }
-    cart.push(cartItem);
-    console.log(cart)
-    // let cartLenght = getTotal(cart)
-    // console.log(cartLenght)
-    // addToCart(cartLenght)
-};
-
-// let cartItemValue = document.querySelector(".cart-item");
-// const addToCart = (a) =>{
-//     cartItemValue.innerHTML = a;
-// };
-
-// const getTotal = (cart) => {
-//     let total = 0;
-//     for (const item of cart) {
-//         total += item.kuantitas;
-//     }
-//     return total
-// }
-
 // efek shadow ketika navbar discroll
 const navContainer = document.querySelector(".nav-container");
 window.addEventListener("scroll", () =>{
